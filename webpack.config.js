@@ -6,11 +6,14 @@ module.exports = {
     output: {
         path: "./public/assets",
         publicPath: "/assets/",
-        filename: "[name]/index.js"
+        filename: "[name]/library.js"
     },
     devServer: {
-        contentBase: "./public"
+        contentBase: "./public",
+        hot: false,
+        inline: true        
     },
+    devtool: "sourceMap",
     module: {
         loaders: [
             {

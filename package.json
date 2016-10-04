@@ -15,8 +15,10 @@
     "es6"
   ],
   "scripts": {
+    "build:sourcemaps": "babel ./client-src -d ./public/assets --source-maps inline",
+    "dev": "webpack-dev-server",
     "start": "node index.js",
-    "build:sourcemaps": "babel ./client-src -d ./public/assets --source-maps inline"
+    "wp": "webpack"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "rimraf": "^2.5.2",
     "run-sequence": "^1.1.5",
     "ui5-loader": "^1.0.3",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
     "express": "^4.13.4"
